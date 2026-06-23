@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kronos · Soluciones domóticas</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="data/productos_catalogo.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html"><div class="logo">K</div><span>KRONOS <small>Catálogo</small></span></a>
+    <div class="nav-actions">
+      <a class="btn ghost" href="index.html">Catálogo</a>
+      <a class="btn ghost" href="marcas.html">Marcas</a>
+      <a class="btn ghost active" href="soluciones.html">Soluciones</a>
+      <a class="btn ghost" href="carrito.html">Carro</a>
+      <a class="btn ghost" href="cuenta.html">Mi cuenta</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="version-pill">Soluciones listas para armar</div>
+    <h1>Soluciones domóticas completas.</h1>
+    <p>Paquetes de productos seleccionados para cada espacio. Agrégalos al carro y coordina instalación con Kronos.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-title">
+      <div><h2>Elige tu solución</h2><p>6 configuraciones probadas para hogares, oficinas y edificios.</p></div>
+      <a class="btn ghost" href="index.html">Ver catálogo completo</a>
+    </div>
+    <div class="solutions-grid" id="solucionesGrid"></div>
+  </section>
+</main>
+
+<!-- Modal solución -->
+<div class="solution-modal" id="solucionModal">
+  <div class="solution-content" id="solucionContent"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<a class="cart" href="carrito.html"><b>Carro</b><span id="cartCount">0</span><small>productos</small></a>
+
+<nav class="mobile-nav" aria-label="Navegación móvil">
+  <a href="index.html"><span>⌂</span>Catálogo</a>
+  <a href="marcas.html"><span>◇</span>Marcas</a>
+  <a href="carrito.html"><span>▣</span>Carro</a>
+  <a href="cuenta.html"><span>○</span>Cuenta</a>
+</nav>
+
+<script src="js/app.js"></script>
+</body>
+</html>

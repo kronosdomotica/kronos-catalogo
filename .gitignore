@@ -1,0 +1,14 @@
+# Documentación interna — no va al repo público
+90_DOCUMENTACION_INTERNA/
+excel/
+registros_demo/
+README_ABRIR_PRIMERO.md
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Node (si se usa en local)
+node_modules/

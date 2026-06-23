@@ -1,0 +1,74 @@
+[
+  {
+    "familia": "Iluminación inteligente",
+    "slug": "iluminación-inteligente",
+    "cantidad": 37,
+    "color": "#f3c969",
+    "icon": "✦",
+    "promise": "Luces, escenas y ambientes inteligentes"
+  },
+  {
+    "familia": "Energía e interruptores",
+    "slug": "energía-e-interruptores",
+    "cantidad": 36,
+    "color": "#ff9f43",
+    "icon": "⚡",
+    "promise": "Control eléctrico, relés, enchufes y medición"
+  },
+  {
+    "familia": "Control, clima y confort",
+    "slug": "control-clima-y-confort",
+    "cantidad": 20,
+    "color": "#74c0fc",
+    "icon": "◌",
+    "promise": "Cortinas, clima, aire y confort"
+  },
+  {
+    "familia": "Seguridad y acceso",
+    "slug": "seguridad-y-acceso",
+    "cantidad": 20,
+    "color": "#ff6b6b",
+    "icon": "◆",
+    "promise": "Cámaras, cerraduras y protección"
+  },
+  {
+    "familia": "Sensores",
+    "slug": "sensores",
+    "cantidad": 19,
+    "color": "#63e6be",
+    "icon": "●",
+    "promise": "Eventos, presencia y automatizaciones"
+  },
+  {
+    "familia": "Red y conectividad",
+    "slug": "red-y-conectividad",
+    "cantidad": 8,
+    "color": "#66d9e8",
+    "icon": "⌁",
+    "promise": "Cobertura, estabilidad y red inteligente"
+  },
+  {
+    "familia": "Hubs y control central",
+    "slug": "hubs-y-control-central",
+    "cantidad": 4,
+    "color": "#b197fc",
+    "icon": "◎",
+    "promise": "Centro de control y compatibilidad"
+  },
+  {
+    "familia": "Clima y confort",
+    "slug": "clima-y-confort",
+    "cantidad": 4,
+    "color": "#9be7ff",
+    "icon": "❄",
+    "promise": "Temperatura, aire y ambiente"
+  },
+  {
+    "familia": "Respaldo y continuidad",
+    "slug": "respaldo-y-continuidad",
+    "cantidad": 2,
+    "color": "#ffd43b",
+    "icon": "▣",
+    "promise": "Energía de respaldo y continuidad"
+  }
+]

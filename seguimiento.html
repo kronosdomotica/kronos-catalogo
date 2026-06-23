@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kronos · Seguimiento</title>
+  <meta name="description" content="Seguimiento de entrega, despacho, WhatsApp y correo preparado."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="data/productos_catalogo.js"></script>
+  
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Ir al catálogo"><div class="logo">K</div><span>KRONOS <small>Catálogo</small></span></a>
+      <div class="nav-actions">
+        <a class="btn ghost " href="index.html">Catálogo</a>
+        <a class="btn ghost" href="marcas.html">Marcas</a>
+        <a class="btn ghost" href="soluciones.html">Soluciones</a>
+        <a class="btn ghost " href="carrito.html">Carro</a>
+        <a class="btn ghost " href="cuenta.html">Mi cuenta</a>
+        <a class="btn ghost " href="pedidos.html">Pedidos</a>
+        <a class="btn ghost " href="pagos.html">Pagos</a>
+        <a class="btn ghost active" href="seguimiento.html">Seguimiento</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero"><div><div class="version-pill">Seguimiento</div><h1>Entrega y seguimiento.</h1><p>Revisa estado de entrega, tracking y mensajes preparados para contacto.</p></div></section>
+    <section class="section"><div class="operation-card"><div class="section-title compact"><div><h3>Seguimiento de solicitudes</h3><p>Despacho, instalación, WhatsApp y correo.</p></div><button class="btn ghost" id="seedDemoBtn">Cargar demo</button></div><div class="requests-table" id="trackingTable"></div></div></section>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kronos · Marcas</title>
+  <meta name="description" content="Marcas del catálogo Kronos con panel propio por marca."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="data/productos_catalogo.js"></script>
+  <script src="data/perfiles_marcas.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Ir al catálogo"><div class="logo">K</div><span>KRONOS <small>Catálogo</small></span></a>
+      <div class="nav-actions">
+        <a class="btn ghost " href="index.html">Catálogo</a>
+        <a class="btn ghost active" href="marcas.html">Marcas</a>
+        <a class="btn ghost " href="carrito.html">Carro</a>
+        <a class="btn ghost " href="cuenta.html">Mi cuenta</a>
+        <a class="btn ghost " href="pedidos.html">Pedidos</a>
+        <a class="btn ghost " href="pagos.html">Pagos</a>
+        <a class="btn ghost " href="seguimiento.html">Seguimiento</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="marcas-page">
+    <section class="brand-hero">
+      <div>
+        <div class="version-pill">Marcas · ecosistemas · compatibilidad</div>
+        <h1>Marcas disponibles en el catálogo Kronos.</h1>
+        <p>Cada marca tiene su propio panel con enfoque, familias asociadas y productos destacados.</p>
+      </div>
+      <div class="brand-stats-panel">
+        <div class="kpi"><b id="brandTotal">0</b><span>marcas</span></div>
+        <div class="kpi"><b id="productTotal">0</b><span>productos</span></div>
+        <div class="kpi"><b id="familyTotal">0</b><span>familias</span></div>
+      </div>
+    </section>
+
+    <section class="section compact-top">
+      <div class="section-title">
+        <div><h2>Panel de marcas</h2><p>Selecciona una marca para revisar qué es, qué aporta y qué productos contiene.</p></div>
+        <input class="search brand-search" id="brandSearch" placeholder="Buscar marca, familia o enfoque..."/>
+      </div>
+      <div class="brand-panels-grid" id="brandCards"></div>
+    </section>
+
+    <section class="section" id="panel-marca">
+      <div class="brand-detail-panel" id="brandDetail">
+        <div class="empty">Selecciona una marca para abrir su panel.</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/marcas.js"></script>
+</body>
+</html>

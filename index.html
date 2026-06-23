@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kronos · Catálogo domótica</title>
+  <meta name="description" content="Catálogo digital Kronos — 150 productos domóticos, familias, marcas, soluciones y carrito."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="data/productos_catalogo.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <div class="logo">K</div>
+      <span>KRONOS <small>Catálogo</small></span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn ghost active" href="index.html">Catálogo</a>
+      <a class="btn ghost" href="marcas.html">Marcas</a>
+      <a class="btn ghost" href="soluciones.html">Soluciones</a>
+      <a class="btn ghost" href="carrito.html">Carro</a>
+      <a class="btn ghost" href="cuenta.html">Mi cuenta</a>
+      <a class="btn ghost" href="pedidos.html">Pedidos</a>
+      <button class="btn ghost" id="openWishlistBtn" title="Favoritos">♥ <span id="wishlistCount">0</span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main id="inicio">
+  <section class="hero catalog-hero v39-hero">
+    <div class="hero-copy wide-copy">
+      <div class="version-pill">Domótica · seguridad · automatización</div>
+      <h1>Equipos inteligentes para armar soluciones reales.</h1>
+      <p>Explora, compara y arma tu solución completa. Tu carro, favoritos y solicitudes quedan guardados.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#catalogo">Explorar catálogo</a>
+        <a class="btn ghost" href="soluciones.html">Ver soluciones</a>
+        <a class="btn ghost" href="marcas.html">Ver marcas</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><b id="totalProducts">0</b><span>productos</span></div>
+        <div class="kpi"><b id="totalFamilies">0</b><span>familias</span></div>
+        <div class="kpi"><b id="totalBrands">0</b><span>marcas</span></div>
+      </div>
+    </div>
+    <aside class="client-panel">
+      <div class="client-panel-head"><span>Mi espacio</span><b id="homeClientName">Visitante</b></div>
+      <a href="carrito.html"><span>Carro</span><b id="homeCartCount">0</b><small>Continuar selección</small></a>
+      <a href="pedidos.html"><span>Pedidos</span><b id="homeOrderCount">0</b><small>Solicitudes registradas</small></a>
+      <a href="pagos.html"><span>Pagos</span><b id="homePaymentStatus">—</b><small>Revisar estado</small></a>
+      <a href="seguimiento.html"><span>Seguimiento</span><b id="homeTrackingStatus">—</b><small>Entrega y contacto</small></a>
+    </aside>
+  </section>
+
+  <!-- FAMILIAS -->
+  <section class="section" id="familias">
+    <div class="section-title">
+      <div><h2>Familias de productos</h2><p>Explora por tipo de solución.</p></div>
+    </div>
+    <div class="marquee-wrap"><div class="marquee" id="familyMarquee"></div></div>
+  </section>
+
+  <!-- RECOMENDADOS -->
+  <section class="section" id="recomendados">
+    <div class="section-title">
+      <div><h2>Productos recomendados</h2><p>Selección para armar una solución rápida.</p></div>
+    </div>
+    <div class="marquee-wrap"><div class="product-rail" id="recommendedRail"></div></div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="section" id="catalogo">
+    <div class="section-title">
+      <div><h2>Catálogo</h2><p id="resultCount">0 productos</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn ghost" id="openCompareBtn">Comparar (<span id="compareCountLabel">0</span>)</button>
+        <a class="btn ghost" href="carrito.html">Ver carro</a>
+      </div>
+    </div>
+    <div class="search-panel">
+      <input class="search" id="search" placeholder="Buscar producto, SKU, familia, marca…"/>
+      <select class="search" id="familyFilter"><option value="Todos">Todas las familias</option></select>
+      <select class="search" id="brandFilter"><option value="Todas">Todas las marcas</option></select>
+      <select class="search" id="sort">
+        <option value="ranking">Recomendado</option>
+        <option value="name">Nombre</option>
+        <option value="priceAsc">Precio ↑</option>
+        <option value="priceDesc">Precio ↓</option>
+      </select>
+      <button class="btn ghost" id="resetFilters">Reset</button>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+</main>
+
+<!-- CARRITO FLOTANTE -->
+<a class="cart" id="floatingCart" href="carrito.html">
+  <b>Carro</b><span id="cartCount">0</span><small id="cartLabel">productos</small>
+</a>
+
+<!-- BARRA COMPARADOR -->
+<div class="compare-bar" id="compareBar">
+  <div class="compare-slots" id="compareSlots"></div>
+  <button class="btn" onclick="openCompareModal()">Comparar</button>
+  <button class="btn ghost" onclick="clearCompare()">Limpiar</button>
+</div>
+
+<!-- MODAL COMPARADOR -->
+<div class="compare-modal" id="compareModal">
+  <div class="compare-content" id="compareContent"></div>
+</div>
+
+<!-- WISHLIST DRAWER -->
+<div class="wishlist-drawer" id="wishlistDrawer">
+  <div class="wishlist-head">
+    <h3>♥ Favoritos</h3>
+    <button class="btn ghost" id="closeWishlistBtn">Cerrar</button>
+  </div>
+  <div class="wishlist-items" id="wishlistItems"></div>
+</div>
+
+<!-- MODAL FICHA -->
+<div class="detail" id="detail">
+  <div class="modal">
+    <div class="modal-head">
+      <div><h2 id="detailTitle">Producto</h2><small id="detailSub"></small></div>
+      <button class="btn ghost" id="closeDetail">Cerrar</button>
+    </div>
+    <div class="modal-body" id="detailBody"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAV MÓVIL -->
+<nav class="mobile-nav" aria-label="Navegación móvil">
+  <a class="active" href="index.html"><span>⌂</span>Catálogo</a>
+  <a href="marcas.html"><span>◇</span>Marcas</a>
+  <a href="carrito.html"><span>▣</span>Carro</a>
+  <a href="cuenta.html"><span>○</span>Cuenta</a>
+</nav>
+
+<script src="js/app.js"></script>
+<script>
+  // Actualizar label comparador en tiempo real
+  document.addEventListener('DOMContentLoaded', () => {
+    const orig = window.renderCompareBar;
+    window.renderCompareBar = function() {
+      orig && orig();
+      const el = document.getElementById('compareCountLabel');
+      if (el) el.textContent = (window.state && window.state.compare) ? window.state.compare.length : 0;
+    };
+  });
+</script>
+</body>
+</html>

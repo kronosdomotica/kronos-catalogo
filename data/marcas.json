@@ -1,0 +1,97 @@
+[
+  {
+    "marca": "Aqara",
+    "slug": "aqara",
+    "cantidad": 41
+  },
+  {
+    "marca": "Philips",
+    "slug": "philips",
+    "cantidad": 28
+  },
+  {
+    "marca": "Sonoff",
+    "slug": "sonoff",
+    "cantidad": 22
+  },
+  {
+    "marca": "Shelly",
+    "slug": "shelly",
+    "cantidad": 16
+  },
+  {
+    "marca": "Govee",
+    "slug": "govee",
+    "cantidad": 9
+  },
+  {
+    "marca": "Reolink",
+    "slug": "reolink",
+    "cantidad": 8
+  },
+  {
+    "marca": "Eero",
+    "slug": "eero",
+    "cantidad": 6
+  },
+  {
+    "marca": "Amazon",
+    "slug": "amazon",
+    "cantidad": 4
+  },
+  {
+    "marca": "Yale",
+    "slug": "yale",
+    "cantidad": 4
+  },
+  {
+    "marca": "Mercusys",
+    "slug": "mercusys",
+    "cantidad": 2
+  },
+  {
+    "marca": "Meross",
+    "slug": "meross",
+    "cantidad": 2
+  },
+  {
+    "marca": "TP-Link",
+    "slug": "tp-link",
+    "cantidad": 1
+  },
+  {
+    "marca": "Forza",
+    "slug": "forza",
+    "cantidad": 1
+  },
+  {
+    "marca": "Google",
+    "slug": "google",
+    "cantidad": 1
+  },
+  {
+    "marca": "Netatmo",
+    "slug": "netatmo",
+    "cantidad": 1
+  },
+  {
+    "marca": "Anwo",
+    "slug": "anwo",
+    "cantidad": 1
+  },
+  {
+    "marca": "Daikin",
+    "slug": "daikin",
+    "cantidad": 1
+  },
+  {
+    "marca": "Carrier",
+    "slug": "carrier",
+    "cantidad": 1
+  },
+  {
+    "marca": "Samsung",
+    "slug": "samsung",
+    "cantidad": 1
+  }
+]
